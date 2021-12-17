@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1">
+  <bpmn:message id="msg_book_hotel" name="bookHotel" />
+  <bpmn:message id="Message_0hl5glq" name="bookFlight" />
+  <bpmn:message id="Message_0sbwf65" name="hotelBooked" />
+  <bpmn:message id="Message_1xwgjx2" name="flightBooked" />
+  <bpmn:process id="Process_1qotbu6" isExecutable="true">
+    <bpmn:startEvent id="Event_16ho0cc">
+      <bpmn:outgoing>Flow_0vsm2ki</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0vsm2ki" sourceRef="Event_16ho0cc" targetRef="Activity_1ip7a55" />
+    <bpmn:endEvent id="Event_10mbf2q">
+      <bpmn:incoming>Flow_0c436uc</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0c436uc" sourceRef="Activity_1ip7a55" targetRef="Event_10mbf2q" />
+    <bpmn:userTask id="Activity_1ip7a55" name="Do something">
+      <bpmn:incoming>Flow_0vsm2ki</bpmn:incoming>
+      <bpmn:outgoing>Flow_0c436uc</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1qotbu6">
+      <bpmndi:BPMNEdge id="Flow_0vsm2ki_di" bpmnElement="Flow_0vsm2ki">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="270" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0c436uc_di" bpmnElement="Flow_0c436uc">
+        <di:waypoint x="370" y="120" />
+        <di:waypoint x="442" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_16ho0cc_di" bpmnElement="Event_16ho0cc">
+        <dc:Bounds x="152" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_10mbf2q_di" bpmnElement="Event_10mbf2q">
+        <dc:Bounds x="442" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nypnm1_di" bpmnElement="Activity_1ip7a55">
+        <dc:Bounds x="270" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,16 @@
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+    filter:
+      create: All
+    history-level: full
+    id-generator: strong
+    deployment:
+      archives:
+        - name: All
+          path: tenants/all
+        - name: One
+          tenant: 1
+          path: tenants/one
